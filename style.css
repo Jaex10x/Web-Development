@@ -1,0 +1,260 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+
+  font-family: "Montserrat", sans-serif;
+  color: #181818;
+}
+p {
+  text-align: justify;
+}
+
+img,
+svg {
+  display: block;
+}
+
+/* ======
+   BLOCKS
+   ====== */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100%;
+  background-color: #fffcf7;
+}
+
+section {
+  width: 800px;
+}
+
+.about-page--grid-container,
+.service-page--grid-container,
+.reviews-page--grid-container {
+  display: grid;
+}
+
+.hero-page {
+  height: 100vh;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.about-page {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav a {
+  color: #181818;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-right: 10px;
+
+  text-decoration: none;
+}
+.hero-page nav.sticky {
+  position: fixed;
+  top: 0;
+  left: 330px;
+  right: 0;
+  z-index: 1000;
+  background: #fffcf7;
+  padding: 1rem 2rem;
+}
+
+
+/* ======
+   ELEMENTS
+   ====== */
+.logo {
+  font-size: 20px;
+  font-weight: 900;
+
+  color: #4d4d4d;
+}
+
+.hero-page h1 {
+  font-size: 64px;
+  font-weight: 600;
+  width: 620px;
+
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  color: #181818;
+}
+.about-page h1,
+.service-page h1,
+.reviews-page h1,
+.contact-page h1 {
+  font-size: 48px;
+  color: #4d4d4d;
+  font-weight: 800;
+}
+
+.about-page {
+  height: 840px;
+  display: flex;
+  justify-content: center;
+
+  font-weight: 500;
+  line-height: 20px;
+  text-align: justify;
+}
+
+.service-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1200px;
+}
+.service-page img {
+  width: 100%;
+  margin-inline: auto;
+}
+.service-page--card {
+  padding: 30px;
+
+  border: 1px solid #181818;
+  border-radius: 8px;
+}
+
+.reviews-page {
+  /* unique value for this section*/
+  width: 1000px;
+  margin-bottom: 200px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+}
+.review-page--card {
+  padding: 30px;
+
+  border: 1px solid #181818;
+  border-radius: 8px;
+}
+.reviews-page .name {
+  line-height: 20px;
+}
+.reviews-page .mock-pfp {
+  height: 30px;
+  width: 30px;
+  background-color: #181818;
+  border-radius: 100%;
+
+  margin-right: 15px;
+}
+
+.contact-page {
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ======
+   MODIFIERS
+   ====== */
+.about-page--grid-container {
+  margin-top: 100px;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.about-page--span {
+  grid-column: 1/3;
+  margin-inline: 30px;
+  text-align: start;
+}
+
+.service-page--grid-container {
+  margin-top: 100px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+.service-page--span {
+  grid-column: 1/4;
+}
+
+.service-page--card p {
+  font-size: 13px;
+}
+.contact-page p {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.reviews-page--grid-container {
+  margin-top: 100px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+/* ----------- */
+.flex {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+/* ======
+   ANIMATIONS
+   ====== */
+   .reviews-page {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+  
+  .reviews-page--grid-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 80%;
+  }
+  
+  .review-page--card {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .mock-pfp {
+    width: 40px;
+    height: 40px;
+    background: gray;
+    border-radius: 50%;
+  }
